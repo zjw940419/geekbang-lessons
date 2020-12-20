@@ -16,15 +16,12 @@
  */
 package org.geekbang.thinking.in.spring.validation;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Validator;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
-import sun.security.krb5.internal.APRep;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
