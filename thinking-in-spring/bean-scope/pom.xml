@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>thinking-in-spring</artifactId>
         <groupId>org.geekbang</groupId>
@@ -11,6 +10,18 @@
 
     <artifactId>bean-scope</artifactId>
     <packaging>war</packaging>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <!-- tomcat8-maven-plugin 所在仓库 -->
+            <id>Alfresco</id>
+            <name>Alfresco Repository</name>
+            <url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencies>
 
@@ -45,6 +56,25 @@
 
     </dependencies>
 
+    <pluginRepositories>
+        <pluginRepository>
+            <id>alfresco-public</id>
+            <url>https://artifacts.alfresco.com/nexus/content/groups/public</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>alfresco-public-snapshots</id>
+            <url>https://artifacts.alfresco.com/nexus/content/groups/public-snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>beardedgeeks-releases</id>
+            <url>http://beardedgeeks.googlecode.com/svn/repository/releases</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <build>
         <plugins>
             <!-- Tomcat 8 Maven 插件用于构建可执行 war -->
@@ -71,16 +101,6 @@
         </plugins>
     </build>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <!-- tomcat8-maven-plugin 所在仓库 -->
-            <id>Alfresco</id>
-            <name>Alfresco Repository</name>
-            <url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+    <
 
 </project>
